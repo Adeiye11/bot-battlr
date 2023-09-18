@@ -1,8 +1,5 @@
 [build]
-  command = "npm run build"
+  command = "json-server --watch db.json --port 8001 & npm run build"
   base    = ""
   publish = "build"
-
-[start]
-  command = "json-server --watch db.json --port 8001 & npm start"
 
