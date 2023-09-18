@@ -1,0 +1,11 @@
+[build]
+  command = "npm run build"
+
+[build.environment]
+  JSON_SERVER_PORT = 8001
+
+[start]
+  command = "json-server --watch db.json --port $JSON_SERVER_PORT & npm start"
+
+[build.publish]
+  directory = "build"
