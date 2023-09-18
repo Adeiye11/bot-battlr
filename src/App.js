@@ -8,7 +8,7 @@ function App() {
   const [botArmy, setBotArmy] = useState([])
 
   useEffect(() => {
-    fetch('https://api.jsonbin.io/v3/b/65089bf95fd7b0304670e543')
+    fetch('https://api.jsonbin.io/v3/b/65089bf95fd7b0304670e543/bots')
       .then(result => result.json())
       .then(data => setBotlist(data))
   }
@@ -29,7 +29,7 @@ function App() {
     const newBotArmy = botArmy.filter(bot => bot.id !== id)
     setBotlist(newBotlist)
     setBotArmy(newBotArmy)
-    const response = await fetch(`http://localhost:3000/bots/${id}`, {
+    const response = await fetch(`https://api.jsonbin.io/v3/b/65089bf95fd7b0304670e543/bots/${id}`, {
       method: 'DELETE'
     })
     const data = await response.json()
