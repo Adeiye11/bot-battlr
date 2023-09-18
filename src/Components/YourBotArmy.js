@@ -5,8 +5,8 @@ import BotCollectionItem from "./BotCollectionItem";
 
 function YourBotArmy({ removeBot, botArmy, deleteBot }) {
     return (
-        <div className="BotCollection">
-            <h3>Bot Collection</h3>
+        <div className="YourBotArmy">
+            <h3>Your Bot Army</h3>
             <div className="row">
                 {botArmy.map(bot => {
                     return (
