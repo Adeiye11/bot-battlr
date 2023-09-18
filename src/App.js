@@ -8,7 +8,7 @@ function App() {
   const [botArmy, setBotArmy] = useState([])
 
   useEffect(() => {
-    fetch('https://api.jsonserve.com/xS8ekS')
+    fetch('http://localhost:8001/bots')
       .then(result => result.json())
       .then(data => setBotlist(data))
   }
@@ -29,7 +29,7 @@ function App() {
     const newBotArmy = botArmy.filter(bot => bot.id !== id)
     setBotlist(newBotlist)
     setBotArmy(newBotArmy)
-    const response = await fetch(`https://api.jsonserve.com/xS8ekS/${id}`, {
+    const response = await fetch(`http://localhost:8001/bots/${id}`, {
       method: 'DELETE'
     })
     const data = await response.json()
