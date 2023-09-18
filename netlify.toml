@@ -6,6 +6,3 @@
 
 [start]
   command = "json-server --watch db.json --port $JSON_SERVER_PORT & npm start"
-
-[build.publish]
-  directory = "build"
