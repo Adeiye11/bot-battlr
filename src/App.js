@@ -8,7 +8,7 @@ function App() {
   const [botArmy, setBotArmy] = useState([])
 
   useEffect(() => {
-    fetch('http://localhost:8001/bots')
+    fetch('https://api.jsonbin.io/v3/b/65089bf95fd7b0304670e543')
       .then(result => result.json())
       .then(data => setBotlist(data))
   }
