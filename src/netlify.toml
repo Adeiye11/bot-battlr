@@ -1,0 +1,5 @@
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Access-Control-Allow-Origin= 'https://resplendent-entremet-ca8cb9.netlify.app'
+        
